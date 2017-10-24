@@ -45,6 +45,9 @@ program = HackerOne::Client::Program.find("insert-program-name-here")
 
 # returns all common responses
 program.common_responses
+
+# pagination on program reporters
+default: program.reporters(page_number: 1, page_size: 25)
 ```
 
 ## State change hooks
